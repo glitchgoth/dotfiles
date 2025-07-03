@@ -142,7 +142,7 @@
         },
         {
             "type": "terminalfont",
-            "key": "│{#red}│ {icon}  Term Font │{$4}│{#keys}│{$2}"
+            "key": "│{#red}│ {icon}  Font      │{$4}│{#keys}│{$2}"
         },
         {
             "type": "packages",
