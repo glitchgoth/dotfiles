@@ -112,12 +112,63 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
+# Color for manpages in less makes manpages a little easier to read
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
 #######################################################
-# ALIASES
+# MACHINE SPECIFIC ALIAS'S
 #######################################################
 
+# Alias's for SSH
+# alias SERVERNAME='ssh YOURWEBSITE.com -l USERNAME -p PORTNUMBERHERE'
+
+# Alias's to change the directory
+alias web='cd /var/www/html'
+
+# Alias's to mount ISO files
+# mount -o loop /home/NAMEOFISO.iso /home/ISOMOUNTDIR/
+# umount /home/NAMEOFISO.iso
+# (Both commands done as root only.)
+
+#######################################################
+# GENERAL ALIASES
+#######################################################
+
+# Edit this .bashrc file
+alias ebrc='edit ~/.bashrc'
+
+# Show help for this .bashrc file
+alias hlp='less ~/.bashrc_help'
+
+# alias to show the date
+# alias da='date "+%Y-%m-%d %A %T %Z"'
+
 # Alias's to modified commands
+#alias cp='cp -i'
+#alias mv='mv -i'
+#alias rm='trash -v'
+#alias mkdir='mkdir -p'
+#alias ps='ps auxf'
+#alias ping='ping -c 10'
+#alias less='less -R'
 alias cls='clear'
+#alias multitail='multitail --no-repeat -c'
+#alias freshclam='sudo freshclam'
+#alias vi='nvim'
+#alias svi='sudo vi'
+#alias vis='nvim "+set si"'
+
+# cd into the old directory
+# alias bd='cd "$OLDPWD"'
+
+# Remove a directory and all files
+alias rmd='/bin/rm  --recursive --force --verbose '
 
 
 # Alias's for multiple directory listing commands
