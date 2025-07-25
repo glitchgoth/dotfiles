@@ -122,10 +122,10 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 #######################################################
-# MACHINE SPECIFIC ALIAS'S
+# MACHINE SPECIFIC ALIASES
 #######################################################
 
-# Alias's for SSH
+# Aliases for SSH
 # alias SERVERNAME='ssh YOURWEBSITE.com -l USERNAME -p PORTNUMBERHERE'
 
 # Alias's to change the directory
@@ -160,9 +160,7 @@ alias hlp='less ~/.bashrc_help'
 alias cls='clear'
 #alias multitail='multitail --no-repeat -c'
 #alias freshclam='sudo freshclam'
-#alias vi='nvim'
 #alias svi='sudo vi'
-#alias vis='nvim "+set si"'
 
 # cd into the old directory
 # alias bd='cd "$OLDPWD"'
@@ -173,7 +171,7 @@ alias rmd='/bin/rm  --recursive --force --verbose '
 
 # Alias's for multiple directory listing commands
 alias la='ls -Alh'                # show hidden files
-alias ls='ls -aFh --color=always' # add colors and file type extensions
+#alias ls='ls -aFh --color=always' # add colors and file type extensions
 alias lx='ls -lXBh'               # sort by extension
 alias lk='ls -lSrh'               # sort by size
 alias lc='ls -ltcrh'              # sort by change time

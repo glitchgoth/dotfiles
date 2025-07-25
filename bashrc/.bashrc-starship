@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 iatest=$(expr index "$-" i)
 #######################################################
-# SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
+# SOURCED ALIASES AND SCRIPTS BY zachbrowne.me
+# VIA CHRIS TITUS USING `curl -fsSL christitus.com/linux | sh`
 #######################################################
 
 # Source global definitions
@@ -133,13 +134,11 @@ alias hlp='less ~/.bashrc_help'
 alias cls='clear'
 #alias multitail='multitail --no-repeat -c'
 #alias freshclam='sudo freshclam'
-#alias vi='nvim'
 #alias svi='sudo vi'
-#alias vis='nvim "+set si"'
 
 
 # cd into the old directory
-# alias bd='cd "$OLDPWD"'
+alias bd='cd "$OLDPWD"'
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
