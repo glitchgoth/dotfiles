@@ -90,22 +90,22 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 #######################################################
-# MACHINE SPECIFIC ALIAS'S
+# MACHINE SPECIFIC ALIASES
 #######################################################
 
-# Alias's for SSH
+# Aliases for SSH
 # alias SERVERNAME='ssh YOURWEBSITE.com -l USERNAME -p PORTNUMBERHERE'
 
-# Alias's to change the directory
+# Aliases to change the directory
 alias web='cd /var/www/html'
 
-# Alias's to mount ISO files
+# Aliases to mount ISO files
 # mount -o loop /home/NAMEOFISO.iso /home/ISOMOUNTDIR/
 # umount /home/NAMEOFISO.iso
 # (Both commands done as root only.)
 
 #######################################################
-# GENERAL ALIAS'S
+# GENERAL ALIASES
 #######################################################
 # To temporarily bypass an alias, we precede the command with a \
 # EG: the ls command is aliased, but to use the normal ls command you would type \ls
@@ -123,10 +123,10 @@ alias hlp='less ~/.bashrc_help'
 # alias to show the date
 # alias da='date "+%Y-%m-%d %A %T %Z"'
 
-# Alias's to modified commands
-#alias cp='cp -i'
-#alias mv='mv -i'
-#alias rm='trash -v'
+# Aliases to modified commands
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='trash -v'
 #alias mkdir='mkdir -p'
 #alias ps='ps auxf'
 #alias ping='ping -c 10'
@@ -143,9 +143,9 @@ alias bd='cd "$OLDPWD"'
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
 
-# Alias's for multiple directory listing commands
+# Aliases for multiple directory listing commands
 alias la='ls -Alh'                # show hidden files
-alias ls='ls -aFh --color=always' # add colors and file type extensions
+#alias ls='ls -aFh --color=always' # add colors and file type extensions
 alias lx='ls -lXBh'               # sort by extension
 alias lk='ls -lSrh'               # sort by size
 alias lc='ls -ltcrh'              # sort by change time
@@ -189,11 +189,11 @@ alias countfiles="for t in files links directories; do echo \`find . -type \${t:
 # Show open ports
 #alias openports='netstat -nape --inet'
 
-# Alias's for safe and forced reboots
-alias rebootsafe='sudo shutdown -r now'
-alias rebootforce='sudo shutdown -r -n now'
+# Aliases for safe and forced reboots
+#alias rebootsafe='sudo shutdown -r now'
+#alias rebootforce='sudo shutdown -r -n now'
 
-# Alias's to show disk space and space used in a folder
+# Aliases to show disk space and space used in a folder
 alias diskspace="du -S | sort -n -r |more"
 alias folders='du -h --max-depth=1'
 alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
@@ -201,7 +201,7 @@ alias tree='tree -CAhF --dirsfirst'
 alias treed='tree -CAFd'
 alias mountedinfo='df -hT'
 
-# Alias's for archives
+# Aliases for archives
 alias mktar='tar -cvf'
 alias mkbz2='tar -cvjf'
 alias mkgz='tar -cvzf'
@@ -421,7 +421,7 @@ ver() {
             cat /etc/SuSE-release
             ;;
         "debian")
-            lsb_release -a
+            cat /etc/os-release
             ;;
         "gentoo")
             cat /etc/gentoo-release
@@ -456,7 +456,7 @@ install_bashrc_support() {
 			sudo zypper install multitail tree zoxide trash-cli fzf bash-completion fastfetch
 			;;
 		"debian")
-			sudo apt-get install multitail tree zoxide trash-cli fzf bash-completion
+			sudo apt install multitail tree zoxide trash-cli fzf bash-completion
 			# Fetch the latest fastfetch release URL for linux-amd64 deb file
 			FASTFETCH_URL=$(curl -s https://api.github.com/repos/fastfetch-cli/fastfetch/releases/latest | grep "browser_download_url.*linux-amd64.deb" | cut -d '"' -f 4)
 
@@ -464,7 +464,7 @@ install_bashrc_support() {
 			curl -sL $FASTFETCH_URL -o /tmp/fastfetch_latest_amd64.deb
 
 			# Install the downloaded deb file using apt-get
-			sudo apt-get install /tmp/fastfetch_latest_amd64.deb
+			sudo apt install /tmp/fastfetch_latest_amd64.deb
 			;;
 		"arch")
 			sudo paru multitail tree zoxide trash-cli fzf bash-completion fastfetch

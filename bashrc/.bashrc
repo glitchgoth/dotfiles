@@ -128,10 +128,10 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 # Aliases for SSH
 # alias SERVERNAME='ssh YOURWEBSITE.com -l USERNAME -p PORTNUMBERHERE'
 
-# Alias's to change the directory
+# Aliases to change the directory
 alias web='cd /var/www/html'
 
-# Alias's to mount ISO files
+# Aliases to mount ISO files
 # mount -o loop /home/NAMEOFISO.iso /home/ISOMOUNTDIR/
 # umount /home/NAMEOFISO.iso
 # (Both commands done as root only.)
@@ -149,10 +149,10 @@ alias hlp='less ~/.bashrc_help'
 # alias to show the date
 # alias da='date "+%Y-%m-%d %A %T %Z"'
 
-# Alias's to modified commands
-#alias cp='cp -i'
-#alias mv='mv -i'
-#alias rm='trash -v'
+# Aliases to modified commands
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='trash -v'
 #alias mkdir='mkdir -p'
 #alias ps='ps auxf'
 #alias ping='ping -c 10'
@@ -163,13 +163,13 @@ alias cls='clear'
 #alias svi='sudo vi'
 
 # cd into the old directory
-# alias bd='cd "$OLDPWD"'
+alias bd='cd "$OLDPWD"'
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
 
 
-# Alias's for multiple directory listing commands
+# Aliases for multiple directory listing commands
 alias la='ls -Alh'                # show hidden files
 #alias ls='ls -aFh --color=always' # add colors and file type extensions
 alias lx='ls -lXBh'               # sort by extension
@@ -310,7 +310,7 @@ ver() {
             cat /etc/SuSE-release
             ;;
         "debian")
-            lsb_release -a
+            cat /etc/os-release
             ;;
         "gentoo")
             cat /etc/gentoo-release
