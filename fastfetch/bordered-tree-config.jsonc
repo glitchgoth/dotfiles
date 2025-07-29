@@ -47,8 +47,8 @@
             "keyColor": "yellow"
         },
         {
-            "type": "packages",
-            "key": "│ ├󰏖",
+            "type": "uptime",
+            "key": "│ ├󰅐",
             "keyColor": "yellow"
         },
         {
@@ -57,13 +57,23 @@
             "keyColor": "yellow"
         },
         {
-            "type": "uptime",
-            "key": "│ └󰅐",
+            "type": "terminal",
+            "key": "│ ├",
             "keyColor": "yellow"
         },
         {
+            "type": "packages",
+            "key": "│ └󰏖",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "de",
+            "key": "󰧨 DE/WM",
+            "keyColor": "blue"
+        },
+        {
             "type": "wm",
-            "key": " DE/WM",
+            "key": "│ ├ ",
             "keyColor": "blue"
         },
         {
@@ -83,17 +93,7 @@
         },
         {
             "type": "font",
-            "key": "│ ├󰛖",
-            "keyColor": "blue"
-        },
-        {
-            "type": "terminal",
-            "key": "│ ├",
-            "keyColor": "blue"
-        },
-        {
-            "type": "terminalfont",
-            "key": "│ ├󰛖",
+            "key": "│ └󰛖",
             "keyColor": "blue"
         },
         {
