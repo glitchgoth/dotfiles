@@ -349,3 +349,9 @@ function whatsmyip () {
     curl -4 ifconfig.me
     echo
 }
+
+lazyg() {
+	git add .
+	git commit -m "$1"
+	git push
+}
