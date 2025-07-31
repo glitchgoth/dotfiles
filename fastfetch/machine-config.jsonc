@@ -35,7 +35,7 @@
         {
             "type": "title",
             "key": " ",
-            "format": "│                   {user-name}@{host-name}                       │"
+            "format": "│                   {user-name}@{host-name}                      │"
         },
         {
             "type": "custom",
