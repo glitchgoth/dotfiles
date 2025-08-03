@@ -1,6 +1,3 @@
-#
-# ~/.bashrc
-#
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -160,10 +157,15 @@ alias rm='trash -v'
 alias cls='clear'
 #alias multitail='multitail --no-repeat -c'
 #alias freshclam='sudo freshclam'
-#alias svi='sudo vi'
 
 # cd into the old directory
 alias bd='cd "$OLDPWD"'
+
+# Shortcut to my git repos
+alias mygit='cd ~/Documents/github/my-repos'  # change as necessary
+
+# Easy exit
+alias xx="exit"
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
@@ -171,7 +173,7 @@ alias rmd='/bin/rm  --recursive --force --verbose '
 
 # Aliases for multiple directory listing commands
 alias la='ls -Alh'                # show hidden files
-#alias ls='ls -aFh --color=always' # add colors and file type extensions
+alias ls='ls -aFh --color=always' # add colors and file type extensions
 alias lx='ls -lXBh'               # sort by extension
 alias lk='ls -lSrh'               # sort by size
 alias lc='ls -ltcrh'              # sort by change time
@@ -196,6 +198,32 @@ alias 644='chmod -R 644'
 alias 666='chmod -R 666'
 alias 755='chmod -R 755'
 alias 777='chmod -R 777'
+
+# Search command line history
+#alias h="history | grep "
+
+# Search running processes
+alias p="ps aux | grep "
+alias topcpu="/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
+
+# Count all files (recursively) in the current folder
+alias countfiles="for t in files links directories; do echo \`find . -type \${t:0:1} | wc -l\` \$t; done 2> /dev/null"
+
+# Aliases to show disk space and space used in a folder
+alias diskspace="du -S | sort -n -r |more"
+alias folders='du -h --max-depth=1'
+alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
+alias tree='tree -CAhF --dirsfirst'
+alias treed='tree -CAFd'
+alias mountedinfo='df -hT'
+
+# Aliases for archives
+alias mktar='tar -cvf'
+alias mkbz2='tar -cvjf'
+alias mkgz='tar -cvzf'
+alias untar='tar -xvf'
+alias unbz2='tar -xvjf'
+alias ungz='tar -xvzf'
 
 #######################################################
 # SPECIAL FUNCTIONS

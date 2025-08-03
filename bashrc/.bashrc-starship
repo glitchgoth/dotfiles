@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 iatest=$(expr index "$-" i)
+
 #######################################################
 # SOURCED ALIASES AND SCRIPTS BY zachbrowne.me
 # VIA CHRIS TITUS USING `curl -fsSL christitus.com/linux | sh`
@@ -134,18 +135,23 @@ alias rm='trash -v'
 alias cls='clear'
 #alias multitail='multitail --no-repeat -c'
 #alias freshclam='sudo freshclam'
-#alias svi='sudo vi'
 
 
 # cd into the old directory
 alias bd='cd "$OLDPWD"'
+
+# Shortcut to my git repos
+alias mygit='cd ~/Documents/github/my-repos'  # change as necessary
+
+# Easy exit
+alias xx="exit"
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
 
 # Aliases for multiple directory listing commands
 alias la='ls -Alh'                # show hidden files
-#alias ls='ls -aFh --color=always' # add colors and file type extensions
+alias ls='ls -aFh --color=always' # add colors and file type extensions
 alias lx='ls -lXBh'               # sort by extension
 alias lk='ls -lSrh'               # sort by size
 alias lc='ls -ltcrh'              # sort by change time
@@ -175,7 +181,7 @@ alias 777='chmod -R 777'
 
 # Search running processes
 alias p="ps aux | grep "
-#alias topcpu="/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
+alias topcpu="/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 
 # Search files in the current folder
 #alias f="find . | grep "
