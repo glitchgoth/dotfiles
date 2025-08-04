@@ -1,5 +1,5 @@
-# config information - https://alacritty.org/config-alacritty.html
-# to be placed in ~/.config/alacritty
+# Config information - https://alacritty.org/config-alacritty.html
+# Place this in ~/.config/alacritty/
 
 [window]
 dimensions = { columns = 120, lines = 40 }

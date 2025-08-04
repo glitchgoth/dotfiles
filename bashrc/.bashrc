@@ -170,7 +170,6 @@ alias xx="exit"
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
 
-
 # Aliases for multiple directory listing commands
 alias la='ls -Alh'                # show hidden files
 alias ls='ls -aFh --color=always' # add colors and file type extensions
@@ -190,14 +189,13 @@ alias lla='ls -Al'                # List and Hidden Files
 alias las='ls -A'                 # Hidden Files
 alias lls='ls -l'                 # List
 
-
 # alias chmod commands
-alias mx='chmod a+x'
-alias 000='chmod -R 000'
-alias 644='chmod -R 644'
-alias 666='chmod -R 666'
-alias 755='chmod -R 755'
-alias 777='chmod -R 777'
+alias mx='chmod a+x'      # make executable for all
+alias 000='chmod -R 000'  # ---
+alias 644='chmod -R 644'  # rw-r--r--
+alias 666='chmod -R 666'  # rw-rw-rw-
+alias 755='chmod -R 755'  # rwx-r-x-r-x
+alias 777='chmod -R 777'  # rwx-rwx-rwx
 
 # Search command line history
 #alias h="history | grep "

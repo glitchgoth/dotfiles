@@ -136,7 +136,6 @@ alias cls='clear'
 #alias multitail='multitail --no-repeat -c'
 #alias freshclam='sudo freshclam'
 
-
 # cd into the old directory
 alias bd='cd "$OLDPWD"'
 
@@ -169,12 +168,12 @@ alias las='ls -A'                 # Hidden Files
 alias lls='ls -l'                 # List
 
 # alias chmod commands
-alias mx='chmod a+x'
-alias 000='chmod -R 000'
-alias 644='chmod -R 644'
-alias 666='chmod -R 666'
-alias 755='chmod -R 755'
-alias 777='chmod -R 777'
+alias mx='chmod a+x'      # make executable for all
+alias 000='chmod -R 000'  # ---
+alias 644='chmod -R 644'  # rw-r--r--
+alias 666='chmod -R 666'  # rw-rw-rw-
+alias 755='chmod -R 755'  # rwx-r-x-r-x
+alias 777='chmod -R 777'  # rwx-rwx-rwx
 
 # Search command line history
 #alias h="history | grep "
